@@ -1,3 +1,14 @@
+/*
+[2015-04-13] Challenge #210 [Easy] intHarmony.com
+http://www.reddit.com/r/dailyprogrammer/comments/32goj8/20150413_challenge_210_easy_intharmonycom/
+Given two integers, return their compatibility percentage using binaries. Also the program returns the opposite binaries of the numbers.
+Example:
+1 in 4-bit binary is 0001, 2 is 0010. They have 50% compatibility.
+1 should avoid 1110, which is 14.
+2 should avoid 1101, which is 13.
+This program will run on 32-bit integers.
+*/
+
 #include <iostream>
 #include <bitset>
 #include <stdio.h>
@@ -9,11 +20,12 @@ string convert_to_binary(int x)
 {
     return bitset<32>(x).to_string();
 }
-int compare(string x, string y)
+
+float compare(string x, string y)
 //compare how similar two binary strings are
 //this function goes through each element in a string and if it is similar, it is a match
 {
-    double match = 0;
+    float match = 0.0;
     for (int i=0; i < x.length(); ++i)
     {
         if ( x[i] == y[i] )
@@ -21,9 +33,10 @@ int compare(string x, string y)
             match += 1;
         }
     }
-    double percentage = (match / 32.0) * 100;
+    float percentage = (match / 32.0) * 100.0; //since 32 bits
     return percentage;
 }
+
 int main()
 //takes in two integers, compare their binary compatibility, and return their reversed binaries as well as compatibility percentage
 {
