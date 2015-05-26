@@ -1,7 +1,7 @@
 """
 [7/21/2014] Challenge #172 [Easy] ■■□□□▦■□
 https://www.reddit.com/r/dailyprogrammer/comments/2ba3g3/7212014_challenge_172_easy/
-Given a string, output a pbm-style image that displays the string through 0s and 1s (or any characters desired)
+Given a string, output a pbm format that displays the string through 0s and 1s (or any characters desired)
 *Only supports all-caps text. Lowercase text can be added, but I'm lazy. 
 """
 import string
