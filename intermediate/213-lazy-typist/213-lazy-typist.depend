@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1433528024 source:c:\users\quanhuynh\desktop\projects\dailyprogrammer\intermediate\213-lazy-typist\main.cpp
+	<iostream>
+	<string>
+	<cmath>
+
