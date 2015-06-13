@@ -19,6 +19,8 @@ https://github.com/quanhuynh/DailyProgrammer/tree/master/easy/212-r%C3%B6varspr%
 215 - Return a b-sad cycle starting at a given number n
 https://github.com/quanhuynh/DailyProgrammer/tree/master/easy/215-sad-cycles
 
+218 - Convert a number into a palindrome by adding its reverse, and return number of steps
+https://github.com/quanhuynh/DailyProgrammer/tree/master/easy/218-palindromic-converter
 
 ## Medium
 163 - Simulate the Fallout 3 hacking game
