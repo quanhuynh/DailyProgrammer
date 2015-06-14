@@ -22,9 +22,13 @@ https://github.com/quanhuynh/DailyProgrammer/tree/master/easy/215-sad-cycles
 218 - Convert a number into a palindrome by adding its reverse, and return number of steps
 https://github.com/quanhuynh/DailyProgrammer/tree/master/easy/218-palindromic-converter
 
-## Medium
+## Intermediate
+
 163 - Simulate the Fallout 3 hacking game
 https://github.com/quanhuynh/DailyProgrammer/tree/master/intermediate/163-fallout-hacker
+
+200 - Evaluate a text file of 'character tiles', returning the dimensions and starting position of the character (refer to data.txt in the link)
+https://github.com/quanhuynh/DailyProgrammer/tree/master/intermediate/200-metro-tile
 
 213 - Output 'hunt & peck' typing instructions for a string
 https://github.com/quanhuynh/DailyProgrammer/tree/master/intermediate/213-lazy-typist
