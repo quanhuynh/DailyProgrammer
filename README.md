@@ -32,3 +32,8 @@ https://github.com/quanhuynh/DailyProgrammer/tree/master/intermediate/200-metro-
 
 213 - Output 'hunt & peck' typing instructions for a string
 https://github.com/quanhuynh/DailyProgrammer/tree/master/intermediate/213-lazy-typist
+
+## Other
+
+Minesweeper Game - Recreated the famous game of Minesweeper using the TkInter GUI module on Python
+https://github.com/quanhuynh/DailyProgrammer/tree/master/other/minesweeper
