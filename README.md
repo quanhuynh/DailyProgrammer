@@ -30,6 +30,9 @@ https://github.com/quanhuynh/DailyProgrammer/tree/master/intermediate/163-fallou
 200 - Evaluate a text file of 'character tiles', returning the dimensions and starting position of the character (refer to data.txt in the link)
 https://github.com/quanhuynh/DailyProgrammer/tree/master/intermediate/200-metro-tile
 
+205 - Converts a given mathematical expression to Reverse Polish Notation (supports correct orders of operations)
+https://github.com/quanhuynh/DailyProgrammer/tree/master/intermediate/205-reverse-polish-notation
+
 213 - Output 'hunt & peck' typing instructions for a string
 https://github.com/quanhuynh/DailyProgrammer/tree/master/intermediate/213-lazy-typist
 
