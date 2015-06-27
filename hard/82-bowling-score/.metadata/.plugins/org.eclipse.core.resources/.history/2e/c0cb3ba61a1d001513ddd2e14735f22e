@@ -1,0 +1,74 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.*;
+public class BowlingScore {
+	public static void main(String[] args) {
+		File dataFile = new File("data.txt");
+		try {
+			Scanner inputFile = new Scanner(dataFile);
+			while (inputFile.hasNextLine()) {
+				String nextLine = inputFile.nextLine();
+				Game newGame = new Game(nextLine);
+				System.out.println(newGame.calculateTotalScore());
+			}
+			inputFile.close();
+		}
+		catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+		
+}
+
+class Round {
+	int firstBall, secondBall;
+	public Round(int first, int second) {
+		this.firstBall = first;
+		this.secondBall = second;
+	}
+}
+
+class Game {
+	List<Round> game = new ArrayList<Round>();
+	public Game(String inputLine) {
+		Scanner input = new Scanner(inputLine);
+		while (input.hasNextInt()) {
+			int first = input.nextInt();
+			int second = input.nextInt();
+			Round thisRound = new Round(first, second);
+			this.game.add(thisRound);
+		}
+		input.close();
+
+	}
+	public List<Integer> calculateTotalScore() {
+		List<Integer> total = new ArrayList<Integer>();
+		for (int i=0; i<this.game.size(); i++) {
+			int roundScore = 0;
+			Round round = this.game.get(i);
+			if (round.firstBall == 10) {
+				if (i == 10) {
+					if (round.secondBall == 10) {
+						roundScore = 20;
+					} else {
+						roundScore = 10;
+					}
+				} else {
+					int nextBall = this.game.get(i+1).firstBall;
+					int nextNextBall = this.game.get(i+1).secondBall;
+					if (nextBall == 10) {
+						nextNextBall = this.game.get(i+2).secondBall;
+					}
+					roundScore = round.firstBall + nextBall + nextNextBall;
+				}
+			} else if (round.firstBall + round.secondBall == 10) {
+				int nextBall = this.game.get(i+1).firstBall;
+				roundScore = 10 + nextBall;
+			} else {
+				roundScore = round.firstBall + round.secondBall;
+			}
+			total.add(roundScore);
+		}
+		return total;
+	}
+}

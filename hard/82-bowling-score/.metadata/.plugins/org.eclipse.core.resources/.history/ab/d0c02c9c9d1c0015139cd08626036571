@@ -1,0 +1,32 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+public class BowlingScore {
+	Round[] game = new Round[11];
+	public static void main(String[] args) {
+		File dataFile = new File("data.txt");
+		try {
+			Scanner input = new Scanner(dataFile);
+			input.close();
+		}
+		catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		Scanner conIn = new Scanner(System.in);
+		while (conIn.hasNextInt()) {
+			int nextInt = conIn.nextInt();
+			System.out.println(nextInt);
+		}
+		conIn.close();
+	}
+	
+		
+}
+
+class Round {
+	int firstBall, secondBall;
+	public Round(int first, int second) {
+		this.firstBall = first;
+		this.secondBall = second;
+	}
+}

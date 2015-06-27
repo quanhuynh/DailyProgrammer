@@ -1,5 +1,11 @@
 import java.util.*;
-
+/*
+	[2015-03-11] Challenge #205 [Intermediate] Reversed Polish Notation
+	https://www.reddit.com/r/dailyprogrammer/comments/2yquvm/20150311_challenge_205_intermediate_rpn/
+	RPN is a notation for mathematical expression that puts the operator at the end, after the operands (like Scheme but at the end)
+	For example, conventional 3 + 4 would be written as 3 4 + in RPN
+	This program takes in a string of mathematical expression and returns the RPN form, taking into account orders of operations and parentheses.
+*/
 public class ReverePolish {
 
 	public static void main(String[] args) {

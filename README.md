@@ -1,5 +1,5 @@
 # DailyProgrammer
-Solutions to some of the challenges/problems in https://www.reddit.com/r/dailyprogrammer subreddit
+These are solutions to some of the challenges/problems in https://www.reddit.com/r/dailyprogrammer subreddit. Additionally, I will also host other mini-projects here (such as Minesweeper which you can find below) that may not have been listed in the subreddit but I want to do anyway. 
 
 # Catalog of solutions: 
 ## Easy
@@ -36,7 +36,12 @@ https://github.com/quanhuynh/DailyProgrammer/tree/master/intermediate/205-revers
 213 - Output 'hunt & peck' typing instructions for a string
 https://github.com/quanhuynh/DailyProgrammer/tree/master/intermediate/213-lazy-typist
 
+## Hard
+
+82 - Program to simulate a bowling game given data and calculate all individual round scores and total score
+https://github.com/quanhuynh/DailyProgrammer/tree/master/hard/82-bowling-score
+
 ## Other
 
-Minesweeper Game - Recreated the famous game of Minesweeper using the TkInter GUI module on Python
+Minesweeper Game - Recreated the game of Minesweeper using the TkInter GUI module on Python
 https://github.com/quanhuynh/DailyProgrammer/tree/master/other/minesweeper

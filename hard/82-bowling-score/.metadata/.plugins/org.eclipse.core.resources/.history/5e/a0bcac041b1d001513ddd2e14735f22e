@@ -1,0 +1,16 @@
+import junit.framework.TestCase;
+
+
+public class BowlingScoreTest extends TestCase {
+	public void testRound() {
+		Round newRound = new Round(10, 0);
+		Round anotherRound = new Round(6, 4);
+		assertTrue (newRound.firstBall == 10);
+		assertTrue (anotherRound.firstBall + anotherRound.secondBall == 10);
+	}
+	public void testGame() {
+		String sampleScore = "10 0 10 0 10 0 10 0 10 0 10 0 10 0 10 0 10 0 10 0 10 10";
+		Game perfectGame = new Game(sampleScore);
+		assertTrue (perfectGame.game.get(0).firstBall == 10);
+	}
+}

@@ -1,0 +1,59 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.*;
+public class BowlingScore {
+	List<Round> game = new ArrayList<Round>();
+	public static void main(String[] args) {
+		File dataFile = new File("data.txt");
+		try {
+			Scanner input = new Scanner(dataFile);
+			while (input.hasNextInt()) {
+				int first = input.nextInt();
+				int second = input.nextInt();
+				Round thisRound = new Round(first, second);
+				game.add(thisRound);
+			}
+			
+			input.close();
+		}
+		catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public int calculateTotalScore(List<Round> game) {
+		int total = 0;
+		boolean strike = false;
+		boolean spare = false;
+		for (int i=0; i<game.size(); i++) {
+			Round round = game.get(i);
+			int rollOverScore = 0;
+			if (strike) {
+				rollOverScore = round.firstBall + round.secondBall;
+				strike = false;
+			} else if (spare) {
+				rollOverScore = round.firstBall;
+				spare = false;
+			}
+			if (round.firstBall == 10) {
+				strike = true;
+			} else if (round.firstBall + round.secondBall == 10) {
+				spare = true;
+			}
+			total += rollOverScore + round.firstBall + round.secondBall;
+		}
+		return total;
+	}
+		
+}
+
+class Round {
+	int firstBall, secondBall;
+	public Round(int first, int second) {
+		this.firstBall = first;
+		this.secondBall = second;
+	}
+}
+
+class Game {
+}
