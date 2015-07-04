@@ -41,6 +41,10 @@ https://github.com/quanhuynh/DailyProgrammer/tree/master/intermediate/213-lazy-t
 82 - Program to simulate a bowling game given data and calculate all individual round scores and total score
 https://github.com/quanhuynh/DailyProgrammer/tree/master/hard/82-bowling-score
 
+157 - ASCII Bird - a more shitty version of Flappy Bird; play on command line
+https://github.com/quanhuynh/DailyProgrammer/tree/master/hard/157-ascii-bird
+
+
 ## Other
 
 Minesweeper Game - Recreated the game of Minesweeper using the TkInter GUI module on Python
