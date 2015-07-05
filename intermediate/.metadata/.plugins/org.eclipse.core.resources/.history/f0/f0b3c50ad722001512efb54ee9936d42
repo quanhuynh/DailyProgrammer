@@ -1,0 +1,119 @@
+import java.awt.Color;
+import java.util.ArrayList;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import javax.imageio.ImageIO;
+
+public class Ant {
+	
+	private ArrayList<Color> colors;
+	private static final int DIMENSION = 512;
+	private String sequence;
+	private int sequenceLength;
+	private int direction;
+	private int xCoord, yCoord;
+	private BufferedImage img;
+	private int curIndex;
+	
+	public Ant(String sequence, int steps) {
+		this.sequence = sequence;
+		sequenceLength = sequence.length();
+		curIndex = 0;
+		direction = 90;
+		xCoord = DIMENSION/2;
+		yCoord = DIMENSION/2;
+		img = new BufferedImage(DIMENSION, DIMENSION, BufferedImage.TYPE_INT_RGB);
+		colors = new ArrayList<Color>();
+		colors.add(Color.white);
+		colors.add(Color.lightGray);
+		colors.add(Color.red);
+		colors.add(Color.blue);
+		colors.add(Color.yellow);
+		runAnt(steps);
+	}
+	
+	/**
+	 * Runs the Langton's Ant program
+	 * @param steps Number of steps running
+	 */
+	public void runAnt(int steps) {
+		while (steps > 0) {
+			if (!inBound(xCoord, yCoord)) {
+				break;
+			}
+			int nextIndex;
+			if (curIndex+1 == sequenceLength) {
+				nextIndex = 0;
+			} else {
+				nextIndex = curIndex+1;
+			}
+			changeDir(sequence.charAt(curIndex)+"");
+			moveAnt(direction);
+			img.setRGB(xCoord, yCoord, colors.get(nextIndex).getRGB());
+			steps--;
+			if (curIndex+1 == sequenceLength) {
+				curIndex = 0;
+			} else {
+				curIndex++;
+			}
+		}
+		saveImage();
+	}
+	
+	/**
+	 * Change direction (theta) based on L or R
+	 * @param way Specifies left or right
+	 */
+	public void changeDir(String way) {
+		if (way.equals("L")) {
+			if (direction == 270) {
+				direction = 0;
+			} else {
+				direction += 90;
+			}
+		} else {
+			if (direction == 0) {
+				direction = 270;
+			} else {
+				direction -= 90;
+			}
+		}
+	}
+	
+	/**
+	 * Move ant according to direction (theta)
+	 * @param direction Direction ant is currently moving
+	 */
+	public void moveAnt(int direction) {
+		if (direction == 0) {
+			xCoord--;
+		} else if (direction == 180) {
+			xCoord++;
+		} else if (direction == 90) {
+			yCoord--;
+		} else if (direction == 270) {
+			yCoord++;
+		} else {
+			throw new IllegalArgumentException("Bad direction");
+		}
+	}
+	
+	public boolean inBound(int x, int y) {
+		return (x>0 && y>0 && x<DIMENSION && y<DIMENSION);
+	}
+	
+	public void saveImage() {
+		File f = new File("output.png");
+		try {
+            ImageIO.write(img, "PNG", f);
+        } catch(IOException e) {
+            e.printStackTrace();
+        }
+	}
+	
+	public static void main(String args[]) {
+		int steps = Integer.parseInt(args[1]);
+		new Ant(args[0], steps);
+	}
+}

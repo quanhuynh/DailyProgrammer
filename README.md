@@ -1,8 +1,8 @@
 # DailyProgrammer
 These are solutions to some of the challenges/problems in https://www.reddit.com/r/dailyprogrammer subreddit. Additionally, I will also host other mini-projects here (such as Minesweeper which you can find below) that may not have been listed in the subreddit but I want to do anyway. 
 
-# Catalog of solutions: 
-## Easy
+## Catalog of solutions: 
+### Easy
 
 172 - Output a pbm format that represents a given string
 https://github.com/quanhuynh/DailyProgrammer/tree/master/easy/172-pbm-image
@@ -22,10 +22,13 @@ https://github.com/quanhuynh/DailyProgrammer/tree/master/easy/215-sad-cycles
 218 - Convert a number into a palindrome by adding its reverse, and return number of steps
 https://github.com/quanhuynh/DailyProgrammer/tree/master/easy/218-palindromic-converter
 
-## Intermediate
+### Intermediate
 
 163 - Simulate the Fallout 3 hacking game
 https://github.com/quanhuynh/DailyProgrammer/tree/master/intermediate/163-fallout-hacker
+
+173 - Langton's Ant Simulator. Check out the cool pics
+https://github.com/quanhuynh/DailyProgrammer/tree/master/intermediate/173-langtons-ant
 
 200 - Evaluate a text file of 'character tiles', returning the dimensions and starting position of the character (refer to data.txt in the link)
 https://github.com/quanhuynh/DailyProgrammer/tree/master/intermediate/200-metro-tile
@@ -36,7 +39,7 @@ https://github.com/quanhuynh/DailyProgrammer/tree/master/intermediate/205-revers
 213 - Output 'hunt & peck' typing instructions for a string
 https://github.com/quanhuynh/DailyProgrammer/tree/master/intermediate/213-lazy-typist
 
-## Hard
+### Hard
 
 82 - Program to simulate a bowling game given data and calculate all individual round scores and total score
 https://github.com/quanhuynh/DailyProgrammer/tree/master/hard/82-bowling-score
@@ -45,7 +48,7 @@ https://github.com/quanhuynh/DailyProgrammer/tree/master/hard/82-bowling-score
 https://github.com/quanhuynh/DailyProgrammer/tree/master/hard/157-ascii-bird
 
 
-## Other
+### Other
 
 Minesweeper Game - Recreated the game of Minesweeper using the TkInter GUI module on Python
 https://github.com/quanhuynh/DailyProgrammer/tree/master/other/minesweeper
