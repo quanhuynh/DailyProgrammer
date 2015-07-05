@@ -1,12 +1,3 @@
-/**
- * [7/30/2014] Challenge #173 [Intermediate] Advanced Langton's Ant
- * https://www.reddit.com/r/dailyprogrammer/comments/2c4ka3/7302014_challenge_173_intermediate_advanced/
- * Langton's Ant is an interesting 2D Turing machine that simulates movement of an ant based on the color of the tiles it's standing on
- * For example, in the standard version, if a tile is white, the ant turns 90deg right, and if black, 90deg left, starting on an all-white board and pointing north
- * This program takes in (0) a sequence of instructions, either L or R, (1) number of steps to simulate Langton's Ant
- * For each L or R, the direction is mapped onto a color, so LRR means left on white, right on gray, right on red, etc.
- */
-
 import java.awt.Color;
 import java.util.ArrayList;
 import java.awt.image.BufferedImage;
