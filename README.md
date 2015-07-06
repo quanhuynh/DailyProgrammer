@@ -52,3 +52,6 @@ https://github.com/quanhuynh/DailyProgrammer/tree/master/hard/157-ascii-bird
 
 Minesweeper Game - Recreated the game of Minesweeper using the TkInter GUI module on Python
 https://github.com/quanhuynh/DailyProgrammer/tree/master/other/minesweeper
+
+Interactive Conway's Game of Life - Simulated Conway's Game of Life with the interactive option of reviving or killing cells
+https://github.com/quanhuynh/DailyProgrammer/tree/master/other/conways-game-of-life
