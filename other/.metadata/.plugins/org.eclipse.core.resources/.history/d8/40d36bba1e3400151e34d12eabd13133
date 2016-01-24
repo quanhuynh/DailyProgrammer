@@ -13,7 +13,7 @@ public class Conway extends JFrame {
 	static JLabel[] myLabels;
 	private static final int WIDTH = 50;
 	private static final int HEIGHT = 30;
-	private static final int interval = 250;
+	private static final int interval = 150;
 	
 	public Conway() {
 		super("Conway's Game of Life");
@@ -59,7 +59,7 @@ public class Conway extends JFrame {
 		setVisible(true);
 		
 		InitialConditions.blinker(WIDTH/2, HEIGHT/2);
-		InitialConditions.block(WIDTH/2 + 10, HEIGHT/2 + 10);
+		//InitialConditions.block();
 	}
 
 	
@@ -166,6 +166,8 @@ public class Conway extends JFrame {
 	}
 	
 	private static class InitialConditions {
+		static int midX = WIDTH/2;
+		static int midY = HEIGHT/2;
 		
 		public static void blinker(int x, int y) { 
 			for (int i=-1; i<=1; i++) {
