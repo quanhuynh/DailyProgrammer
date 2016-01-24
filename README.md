@@ -1,7 +1,7 @@
 # DailyProgrammer
 These are solutions to some of the challenges/problems in https://www.reddit.com/r/dailyprogrammer subreddit. Additionally, I will also host other mini-projects here (such as Minesweeper which you can find below) that may not have been listed in the subreddit but I want to do anyway. 
 
-## Catalog of solutions: 
+## Solutions: 
 ### Easy
 
 172 - Output a pbm format that represents a given string
@@ -38,6 +38,9 @@ https://github.com/quanhuynh/DailyProgrammer/tree/master/intermediate/205-revers
 
 213 - Output 'hunt & peck' typing instructions for a string
 https://github.com/quanhuynh/DailyProgrammer/tree/master/intermediate/213-lazy-typist
+
+246 - Using A->1, B->2, ..., Z->26 mapping, print out possible combinations of letters from an integer
+https://github.com/quanhuynh/DailyProgrammer/tree/master/intermediate/246-letter-splits
 
 ### Hard
 
