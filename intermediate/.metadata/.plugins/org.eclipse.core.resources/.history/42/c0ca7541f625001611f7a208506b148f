@@ -1,0 +1,34 @@
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class GraphRadius {
+	
+	private static void buildGraph(BufferedReader br) {
+		
+	}
+	
+	/**
+	 * Main method reads in input file
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try {
+			File file = new File(args[0]);
+			BufferedReader br = new BufferedReader(new FileReader(file));
+			GraphRadius.buildGraph(br);
+		} catch (IOException io) {
+			io.printStackTrace();
+		}
+	}
+
+	/**
+	 * Inner representation of a graph
+	 *
+	 */
+	private class GraphRep {
+		
+	}
+}
