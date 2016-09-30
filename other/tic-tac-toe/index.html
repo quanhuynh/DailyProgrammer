@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Tic Tac Toe </title>
+		<meta charset="utf-8">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="assets/style.css" type="text/css">
+	</head>
+	<body>
+		<div class="main-container">
+			<h1> Tic Tac Toe </h1>
+			<form name="options">
+				<label for="game-type"> Game Type </label>
+				<select name="game-type">
+					<option value="pvp"> Player v. Player </option>
+					<option value="cvc"> Computer v. Computer </option>
+					<option value="pvc"> Player v. Computer </option>
+				</select>
+				<label for="board-type"> Board Size </label>
+				<select name="board-type">
+					<option value="3"> 3x3 </option>
+					<option value="4"> 4x4 </option>
+					<option value="5"> 5x5 </option>
+				</select>
+				<input type="submit" value="New Game" onclick="return newGame();" />
+			</form>
+			<table id="board">
+			</table>
+			<div id="message"> </div>
+		</div>
+		<script src="assets/scripts.js"></script>
+		<!-- HI PAUL -->
+	</body>
+</html>
